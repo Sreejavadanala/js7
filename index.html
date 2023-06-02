@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication and Division Calculator</title>
+  <style>
+   body {
+      text-align: center;
+    }
+    .list-container {
+      text-align: center;
+      display: inline-block;
+    }
+    </style>
+</head>
+<body>
+<h1 style="text-decoration: underline; color:skyblue;">JAVASCRIPT TASK-7</h1>
+
+  <div class="list-container">
+  <h2>Enter two numbers:</h2>
+  
+  <label for="number1">Number 1:</label>
+  <input type="number" id="number1" required>
+  
+  <label for="number2">Number 2:</label>
+  <input type="number" id="number2" required>
+  <br><br>
+  
+  <button onclick="calculateMultiplication()">Multiply</button>
+  <button onclick="calculateDivision()">Divide</button>
+  <br><br>
+  
+  <div id="result"></div>
+  
+  <script>
+    function calculateMultiplication() {
+      var number1 = parseFloat(document.getElementById('number1').value);
+      var number2 = parseFloat(document.getElementById('number2').value);
+      
+      var result = number1 * number2;
+      
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = 'The result is: ' + result;
+    }
+    
+    function calculateDivision() {
+      var number1 = parseFloat(document.getElementById('number1').value);
+      var number2 = parseFloat(document.getElementById('number2').value);
+      
+      var result = number1 / number2;
+      
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = 'The result is: ' + result;
+    }
+  </script>
+  </div>
+</body>
+</html>
